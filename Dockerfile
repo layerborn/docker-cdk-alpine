@@ -1,12 +1,3 @@
-# CDK Alpine Image
-
-Used for building applications in AWS.
-
-Alpine is fairly small compared to other images so figured by making an alpine version with all the cdk tools would be useful.
-
-dockerfile
-
-```shell
 FROM node:lts-alpine3.12
 LABEL maintainer="layerborn2@gmail.com"
 ENV GLIBC_VER=2.31-r0
@@ -40,4 +31,3 @@ RUN apk --no-cache add \
         curl \
     && rm -rf /var/cache/apk/* \
     && npm install -g aws-cdk
-```
