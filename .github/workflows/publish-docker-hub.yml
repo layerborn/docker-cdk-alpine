@@ -7,7 +7,6 @@ on:
       - main
 jobs:
   publish_docker_hub:
-    needs: build
     runs-on: ubuntu-latest
     permissions: {}
     env:

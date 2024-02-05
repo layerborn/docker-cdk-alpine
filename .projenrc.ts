@@ -9,6 +9,10 @@ const project = new cdk.JsiiProject({
   jsiiVersion: '~5.0.0',
   name: 'docker-cdk-alpine',
   projenrcTs: true,
+  releaseToNpm: false,
+  depsUpgrade: false,
+  release: false,
+  buildWorkflow: false,
   repositoryUrl: 'https://github.com/layerborn/docker-cdk-alpine.git',
 });
 
@@ -78,7 +82,6 @@ buildDockerImage?.addJobs({
 });
 publishDockerHub?.addJobs({
   publish_docker_hub: {
-    needs: ['build'],
     runsOn: ['ubuntu-latest'],
     permissions: {},
     env: {
