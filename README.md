@@ -2,11 +2,13 @@
 
 Used for building CDK applications in AWS.
 
-Alpine is fairly small compared to other images so figured by making an alpine version with all the cdk tools would be useful.
+Alpine is fairly small compared to other images so figured by making an alpine version with all the cdk tools would be
+useful.
 
 dockerfile
+
 ```dockerfile
-FROM node:lts-alpine3.12
+FROM node:18-alpine3.14
 LABEL maintainer="layerborn2@gmail.com"
 ENV GLIBC_VER=2.31-r0
 
