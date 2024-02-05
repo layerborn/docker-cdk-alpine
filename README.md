@@ -9,7 +9,7 @@ dockerfile
 
 ```dockerfile
 FROM node:18-alpine3.14
-LABEL maintainer="layerborn2@gmail.com"
+LABEL maintainer="jayson.rawlins@layerborn.io"
 ENV GLIBC_VER=2.31-r0
 
 # install glibc compatibility for alpine
