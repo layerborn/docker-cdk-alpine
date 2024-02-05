@@ -30,7 +30,6 @@ jspm_packages/
 *.tgz
 .yarn-integrity
 .cache
-!/.projenrc.js
 /test-reports/
 junit.xml
 /coverage/
@@ -50,3 +49,6 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+!/.github/workflows/build-docker-image.yml
+!/.github/workflows/publish-docker-hub.yml
+!/.projenrc.ts

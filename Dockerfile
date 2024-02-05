@@ -1,4 +1,4 @@
-FROM node:21.5.0-slim
+FROM node:18-alpine3.14
 LABEL maintainer="layerborn2@gmail.com"
 ENV GLIBC_VER=2.31-r0
 

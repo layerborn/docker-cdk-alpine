@@ -4,7 +4,9 @@
 /.eslintrc.json linguist-generated
 /.gitattributes linguist-generated
 /.github/pull_request_template.md linguist-generated
+/.github/workflows/build-docker-image.yml linguist-generated
 /.github/workflows/build.yml linguist-generated
+/.github/workflows/publish-docker-hub.yml linguist-generated
 /.github/workflows/pull-request-lint.yml linguist-generated
 /.github/workflows/release.yml linguist-generated
 /.github/workflows/upgrade-main.yml linguist-generated
