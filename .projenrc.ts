@@ -112,7 +112,12 @@ publishDockerHub?.addJobs({
         name: 'get_version',
         id: 'get_version',
         run: [
-          'DVERSION=$(jq .version version.json -r)',
+          'DOCKER_HUB_REPO="layerborn2/cdk-alpine"',
+          "TAGS=$(curl -s \"https://hub.docker.com/v2/repositories/${DOCKER_HUB_REPO}/tags/?page_size=100\" | jq -r '.results|.[]|.name')",
+          "LATEST_VERSION=$(echo \"${TAGS}\" | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n1)",
+          "NEW_VERSION=$(echo $LATEST_VERSION | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./g')",
+          'echo "New version: $NEW_VERSION"',
+          'DVERSION=$(echo $NEW_VERSION)',
           'echo "::set-output name=dversion::$DVERSION"',
         ].join('\n'),
       },
