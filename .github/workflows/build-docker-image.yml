@@ -29,4 +29,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: false
-          tags: layerborn2/docker-cdk-alpine:latest
+          tags: layerborn2/cdk-alpine:latest

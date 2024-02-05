@@ -27,7 +27,7 @@ project.addTask(('docker:test'), {
 });
 
 const dockerHubOrg = 'layerborn2';
-const dockerHubRepo = 'docker-cdk-alpine';
+const dockerHubRepo = 'cdk-alpine';
 const buildDockerImage = project.github?.addWorkflow('build-docker-image');
 const publishDockerHub = project.github?.addWorkflow('publish-docker-hub');
 
